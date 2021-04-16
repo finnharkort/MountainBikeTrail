@@ -1,0 +1,24 @@
+* {
+  border: 0;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #444d30;
+  height: 5rem;
+}
+
+header h1 {
+  color: white;
+  font-family: "Zen Dots", cursive;
+  letter-spacing: 1rem;
+  font-weight: 400;
+}
+
+img {
+  width: 29rem;
+  margin-top: 6rem;
+}
