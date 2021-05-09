@@ -1,18 +1,56 @@
 * {
   border: 0;
   margin: 0;
+  font-family: "Zen Dots", cursive;
+  font-weight: 400;
 }
 
 html {
-  background-color: #ffefd0;
+  background-color: #fff7e7;
+  color: white;
   width: 100vw;
   overflow-x: hidden;
 }
 
-p,
 h1 {
-  font-family: "Zen Dots", cursive;
-  font-weight: 400;
+  font-size: 2.5rem;
+}
+
+h2 {
+  color: black;
+  font-size: 5vw;
+}
+
+h3 {
+  font-size: 1.1rem;
+}
+
+.split-text {
+  font-size: 4.2vw;
+  background-color: black;
+  color: white;
+}
+
+.large-title-text {
+  font-size: 8vw;
+}
+
+p {
+  color: black;
+  font-size: 1.5vw;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: rgb(216, 216, 216);
+}
+
+li {
+  list-style: none;
 }
 
 .flex-column {
@@ -25,9 +63,14 @@ h1 {
   flex-direction: row;
 }
 
-.flex-space {
+.flex-between {
   display: flex;
   justify-content: space-between;
+}
+
+.flex-even {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .flex-column-reverse {
@@ -40,64 +83,106 @@ h1 {
   flex-direction: row-reverse;
 }
 
-h1 {
-  font-size: 4.2vw;
-  color: white;
+.spacing-div {
+  height: 6rem;
 }
 
 header {
   position: fixed;
   top: 0;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  background-color: #444d30;
-  height: 5rem;
+  background-color: #000000;
+  height: 6rem;
   width: 100%;
   z-index: 10;
 }
 
-header h1 {
-  color: white;
-  font-family: "Zen Dots", cursive;
-  letter-spacing: 1rem;
-  font-weight: 400;
+header nav {
+  width: 60%;
 }
 
-section {
+#titleInfo .split-text {
+  z-index: 9;
+  color: white;
+}
+
+.section-grid {
   display: grid;
   grid-template-rows: repeat(40, 2vw);
   grid-template-columns: repeat(50, 2vw);
 }
 
-section img {
+.section-grid img {
   height: 100%;
   width: 100%;
 }
 
-#titleInfo .background-img {
+#titleInfo .main-img {
   grid-column: 1/25;
   grid-row: 5/20;
 }
 
-#titleInfo ._1 {
+#titleInfo .split-text:nth-child(1) {
   grid-column: 15/26;
   grid-row: 10/13;
-  background-color: black;
 }
 
-#titleInfo ._2 {
+#titleInfo .split-text:nth-child(2) {
   grid-column: 15/29;
   grid-row: 13/16;
+}
+
+#titleInfo .split-text:nth-child(3) {
+  grid-column: 15/31;
+  grid-row: 16/19;
+}
+
+#titleInfo .split-text:nth-child(4) {
+  grid-column: 15/26;
+  grid-row: 19/22;
+}
+
+#titleInfo .button-info {
+  grid-column: 2/22;
+  grid-row: 26/45;
+}
+
+#behind-mtb {
+  grid-column: 35/49;
+  grid-row: 10/30;
+}
+
+.button-info .text div {
+  display: flex;
+  flex-direction: column;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1vw;
+}
+
+.button {
+  padding: 0.5rem 0.9rem;
   background-color: black;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  width: fit-content;
 }
 
-.scrollDiv {
-  height: 1000rem;
-}
-
-.spacing-div {
-  height: 5rem;
+span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-image: url("empty.gif");
 }
 
 .text-right {
@@ -106,4 +191,93 @@ section img {
 
 .text-left {
   text-align: left;
+}
+
+#main-nav .button-info {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5vw;
+  padding: 0 2vw;
+}
+
+#main-nav .text {
+  width: 26%;
+}
+
+#main-nav .button-info:nth-child(2n-1) .text {
+  align-items: flex-end;
+}
+
+#main-nav .button-info:nth-child(2n-1) {
+  flex-direction: row-reverse;
+  align-self: flex-end;
+  text-align: left;
+}
+
+#main-nav .button-info:nth-child(2n) {
+  flex-direction: row;
+  align-self: flex-start;
+}
+
+#main-nav img {
+  width: 45vw;
+}
+
+#main-nav .button-info:nth-child(2n-1) .button-info-fill {
+  text-align: left;
+}
+
+#main-nav .button-info:nth-child(2n) .button-info-fill {
+  text-align: right;
+}
+
+.button p {
+  color: white;
+}
+
+.button-info-fill {
+  background-color: #dfd7c9;
+  padding: 2vw;
+  position: relative;
+}
+
+.button-info-fill:hover,
+.button:hover {
+  bottom: 0.5vw;
+}
+
+.button-info-fill h2 {
+  color: #726e66;
+  font-size: 2.5vw;
+}
+
+#activities-title {
+  color: black;
+}
+
+#activities-title .large-title-text {
+  background-color: black;
+  color: white;
+  grid-column: 5/35;
+  grid-row: 5/10;
+  z-index: 9;
+}
+
+#activities-title .split-text {
+  z-index: 9;
+}
+
+#activities-title .split-text:nth-child(1) {
+  grid-column: 22/46;
+  grid-row: 27/30;
+}
+
+#activities-title .split-text:nth-child(2) {
+  grid-column: 22/41;
+  grid-row: 30/33;
+}
+
+#kayak-mountains {
+  grid-column: 15/45;
+  grid-row: 3/20;
 }
