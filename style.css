@@ -312,3 +312,12 @@ span {
 .scroll-div {
   height: 100rem;
 }
+
+#book-title {
+  grid-template-rows: repeat(50, 2vh);
+}
+
+#book-title nav {
+  grid-column: 1/51;
+  grid-row: 7/20;
+}
